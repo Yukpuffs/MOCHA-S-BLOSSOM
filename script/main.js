@@ -32,6 +32,24 @@ if(formulario){
     formulario.reset()
 })
 
+/*-------------------------------------cuenta--------------------------------------- */
+
+const botonAper = document.getElementById('boton-aper');
+const usuario = document.getElementById('usuario').querySelectorAll('input')
+
+
+
+botonAper.addEventListener("click", () => {
+
+    const estaDeshabilitado = usuario[0].hasAttribute('disabled');
+
+    if (estaDeshabilitado) {
+        usuario.forEach(input => input.removeAttribute('disabled'));
+    } else {
+        usuario.forEach(input => input.setAttribute('disabled', 'true'));
+    }
+});    
+
 }
 
 
@@ -314,3 +332,4 @@ if (contenedor && carrito.length > 0) {
     })
 
 } 
+
